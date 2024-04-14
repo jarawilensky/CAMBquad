@@ -40,7 +40,7 @@ class DarkEnergyEqnOfState(DarkEnergyModel):
 
     def set_params(self, w=-1.0, wa=0, cs2=1.0):
         """
-         Set the parameters so that P(a)/rho(a) = w(a) = w + (1-a)*wa
+         Set the parameters so that P(a)/rho(a) = w(a) = w + wa*(1-a)**2
 
         :param w: w(0)
         :param wa: -dw/da(0)
