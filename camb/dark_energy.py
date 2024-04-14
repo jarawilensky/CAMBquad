@@ -17,7 +17,7 @@ class DarkEnergyModel(F2003Class):
 
 class DarkEnergyEqnOfState(DarkEnergyModel):
     """
-    Abstract base class for models using w and wa parameterization with use w(a) = w + (1-a)*wa parameterization,
+    Abstract base class for models using w and wa parameterization with use w(a) = w + wa*(1-a)**2 parameterization,
     or call set_w_a_table to set another tabulated w(a). If tabulated w(a) is used, w and wa are set
     to approximate values at z=0.
 
