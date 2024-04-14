@@ -187,7 +187,7 @@
     real(dl), intent(IN) :: a
 
     if(.not. this%use_tabulated_w) then
-        TDarkEnergyEqnOfState_w_de= this%w_lam+ this%wa*(1._dl-a)
+        TDarkEnergyEqnOfState_w_de= this%w_lam+ this%wa*(1._dl-a)**2
     else
         al=dlog(a)
         if(al <= this%equation_of_state%Xmin_interp) then
