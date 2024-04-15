@@ -217,7 +217,7 @@
     real(dl), intent(IN) :: a
 
     if(.not. this%use_tabulated_w) then
-        grho_de = a ** (1._dl - 1.5 * this%w_lam - 1.5 * this%wa)
+        grho_de = a ** (1._dl - 3. * this%w_lam - 3. * this%wa)
         if (this%wa/=0) grho_de=grho_de*exp(-1.5 * this%wa * (3._dl - 4*a + a **2))
     else
         if(a == 0.d0)then
