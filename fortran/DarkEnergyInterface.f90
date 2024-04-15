@@ -218,7 +218,7 @@
 
     if(.not. this%use_tabulated_w) then
         grho_de = a ** (1._dl - 3. * this%w_lam - 3. * this%wa)
-        if (this%wa/=0) grho_de=grho_de*exp(-3.5 * this%wa * (1._dl - a + a **2))
+        if (this%wa/=0) grho_de=grho_de*exp(-3.5 * this%wa * (3._dl - 4*a + a **2))
     else
         if(a == 0.d0)then
             grho_de = 0.d0      !assume rho_de*a^4-->0, when a-->0, OK if w_de always <0.
